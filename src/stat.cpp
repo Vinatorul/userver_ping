@@ -18,7 +18,7 @@ public:
       : HttpHandlerBase(config, component_context),
         ping_component_(
             component_context
-                .FindComponent<userver::components::Postgres>("handler-v1-ping")) {}
+                .FindComponent<Ping>("handler-v1-ping")) {}
 
   using HttpHandlerBase::HttpHandlerBase;
 
