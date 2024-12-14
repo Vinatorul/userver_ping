@@ -25,7 +25,7 @@ public:
       const userver::server::http::HttpRequest &request,
       userver::server::request::RequestContext&) const override {
 
-    auto counter_str std::to_string(component_context_
+    auto counter_str = std::to_string(component_context_
                 .FindComponent<Ping>("handler-v1-ping").counter_);
 
     return counter_str;
