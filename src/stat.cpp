@@ -17,19 +17,22 @@ public:
   Stat(const userver::components::ComponentConfig& config,
         const userver::components::ComponentContext& component_context)
       : HttpHandlerBase(config, component_context),
-        ping_component_(
-            component_context
-                .FindComponent<Ping>("handler-v1-ping")) {}
+        component_context_(component_context) {}
 
   using HttpHandlerBase::HttpHandlerBase;
 
   std::string HandleRequestThrow(
       const userver::server::http::HttpRequest &request,
       userver::server::request::RequestContext&) const override {
-    return std::to_string(ping_component_.counter_);
+
+    auto couter = 
+            component_context_
+                .FindComponent<Ping>("handler-v1-ping").counter_;
+
+    return std::to_string(couter);
   }
 
-  Ping ping_component_;
+  const userver::components::ComponentContext& component_context_;
 };
 
 } // namespace
