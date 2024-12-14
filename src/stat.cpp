@@ -13,7 +13,7 @@ class Stat final : public userver::server::handlers::HttpHandlerBase {
 public:
   static constexpr std::string_view kName = "handler-v1-stat";
 
-  Hello(const userver::components::ComponentConfig& config,
+  Stat(const userver::components::ComponentConfig& config,
         const userver::components::ComponentContext& component_context)
       : HttpHandlerBase(config, component_context),
         ping_component_(
