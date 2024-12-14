@@ -57,6 +57,6 @@ components_manager:
 
 
         handler-v1-stat:                    # Finally! Our handler.
-            path: /v1/stat                  # Registering handler by URL '/v1/ping'.
+            path: /v1/stat                  # Registering handler by URL '/v1/stat'.
             method: GET,POST              # It will only reply to GET (HEAD) and POST requests.
             task_processor: main-task-processor  # Run it on CPU bound task processor

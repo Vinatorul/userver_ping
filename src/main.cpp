@@ -6,6 +6,7 @@
 #include <userver/testsuite/testsuite_support.hpp>
 #include <userver/utils/daemon_run.hpp>
 
+#include "stat.hpp"
 #include "ping.hpp"
 
 int main(int argc, char* argv[]) {
@@ -17,6 +18,7 @@ int main(int argc, char* argv[]) {
                             .Append<userver::server::handlers::TestsControl>();
 
   service_template::AppendPing(component_list);
+  service_template::AppendStat(component_list);
 
   return userver::utils::DaemonMain(argc, argv, component_list);
 }
