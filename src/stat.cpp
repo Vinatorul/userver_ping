@@ -25,11 +25,10 @@ public:
       const userver::server::http::HttpRequest &request,
       userver::server::request::RequestContext&) const override {
 
-    auto couter = 
-            component_context_
-                .FindComponent<Ping>("handler-v1-ping").counter_;
+    auto counter_str std::to_string(component_context_
+                .FindComponent<Ping>("handler-v1-ping").counter_);
 
-    return std::to_string(couter);
+    return counter_str;
   }
 
   const userver::components::ComponentContext& component_context_;
