@@ -10,7 +10,7 @@ namespace {
 
 class Ping final : public userver::server::handlers::HttpHandlerBase {
 public:
-  static constexpr std::string_view kName = "handler-ping";
+  static constexpr std::string_view kName = "handler-v1-ping";
 
   using HttpHandlerBase::HttpHandlerBase;
 
