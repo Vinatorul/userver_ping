@@ -12,6 +12,9 @@ class Ping final : public userver::server::handlers::HttpHandlerBase {
 public:
   static constexpr std::string_view kName = "handler-v1-ping";
 
+  Ping(const userver::components::ComponentConfig& config,
+        const userver::components::ComponentContext& component_context) {}
+
   using HttpHandlerBase::HttpHandlerBase;
 
   std::string HandleRequestThrow(
