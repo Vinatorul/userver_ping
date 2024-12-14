@@ -4,6 +4,7 @@
 #include <string_view>
 
 #include <userver/components/component_list.hpp>
+#include <userver/server/handlers/http_handler_base.hpp>
 
 namespace service_template {
 
