@@ -3,6 +3,7 @@
 
 #include <fmt/format.h>
 
+#include <userver/components/component.hpp>
 #include <userver/server/handlers/http_handler_base.hpp>
 
 namespace service_template {
