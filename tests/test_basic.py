@@ -4,11 +4,11 @@ async def test_basic(service_client):
         '/v1/ping',
     )
     assert response.status == 200
-    assert response.text == '1\n'
+    assert response.text == '1'
 
     response = await service_client.post(
         '/v1/ping',
     )
     assert response.status == 200
-    assert response.text == '2\n'
+    assert response.text == '2'
 
